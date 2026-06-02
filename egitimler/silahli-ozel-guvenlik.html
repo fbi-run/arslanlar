@@ -74,10 +74,10 @@
                             class="text-sm text-muted-foreground hover:text-foreground transition-colors"
                             href="../hakkimizda.html">Hakkımızda</a><a
                             class="text-sm text-muted-foreground hover:text-foreground transition-colors"
-                            href="../iletisim.html">İletişim</a><a href="https://wa.me/902124156526" target="_blank"
+                            href="../iletisim.html">İletişim</a><a href="https://wa.me/905368299055" target="_blank"
                             rel="noopener noreferrer"
                             class="inline-flex items-center rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground shadow hover:opacity-90">Whatsapp</a>
-                    </nav><button aria-label="Menüyü Aç/Kapat"
+                    </nav><button id="mobile-menu-btn" aria-label="Menüyü Aç/Kapat"
                         class="md:hidden inline-flex h-10 w-10 items-center justify-center rounded-md border"><svg
                             width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                             stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-foreground">
@@ -88,6 +88,36 @@
                 </div>
             </div>
         </header>
+        <div id="mobile-menu" class="hidden md:hidden border-t bg-background">
+    <nav class="flex flex-col p-4 gap-3">
+        <a class="rounded-md border px-4 py-3 text-sm hover:bg-secondary"
+            href="../index.html">
+            Ana Sayfa
+        </a>
+
+        <a class="rounded-md border px-4 py-3 text-sm hover:bg-secondary"
+            href="../egitimler.html">
+            Eğitimler
+        </a>
+
+        <a class="rounded-md border px-4 py-3 text-sm hover:bg-secondary"
+            href="../hakkimizda.html">
+            Hakkımızda
+        </a>
+
+        <a class="rounded-md border px-4 py-3 text-sm hover:bg-secondary"
+            href="../iletisim.html">
+            İletişim
+        </a>
+
+        <a href="https://wa.me/905368299055"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-flex items-center justify-center rounded-md bg-primary px-4 py-3 text-sm font-medium text-primary-foreground">
+            Whatsapp
+        </a>
+    </nav>
+</div>
     </div><!--$--><!--/$-->
     <main class="min-h-dvh">
         <section class="relative isolate">
@@ -197,6 +227,14 @@
             </div>
         </footer>
     </div>
+    <script>
+const menuBtn = document.getElementById("mobile-menu-btn");
+const mobileMenu = document.getElementById("mobile-menu");
+
+menuBtn.addEventListener("click", () => {
+    mobileMenu.classList.toggle("hidden");
+});
+</script>
 </body>
 
 </html>
